@@ -1,0 +1,18 @@
+{
+  "name": "my_simple_agent",
+  "version": "1.0.0",
+  "description": "A simple agent for handling LLM interactions",
+  "license": "MIT",
+  "author": "Yu Fan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "@google/genai": "^2.29.1",
+    "dotenv": "^18.0.7",
+    "openai": "^7.32.0"
+  }
+}

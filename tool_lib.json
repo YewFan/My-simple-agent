@@ -1,0 +1,120 @@
+[
+  {
+    "type": "function",
+    "name": "get_weather",
+    "description": "Retrieves current weather for the given location.",
+    "param": {
+      "type": "object",
+      "properties": {
+        "locations": {
+          "type": "string",
+          "description": "City and country e.g. Bogotá, Colombia"
+        },
+        "units": {
+          "type": "string",
+          "enum": [
+            "celsius",
+            "fahrenheit"
+          ],
+          "description": "Units the temperature will be returned in."
+        }
+      },
+      "required": [
+        "locations",
+        "units"
+      ],
+      "additionalProperties": false
+    },
+    "strict": true
+  },
+  {
+    "type": "function",
+    "name": "get_horoscope",
+    "param": {
+      "type": "object",
+      "properties": {
+        "sign": {
+          "type": "string",
+          "description": "An astrological sign like Taurus or Aquarius"
+        }
+      },
+      "required": [
+        "sign"
+      ],
+      "additionalProperties": false
+    },
+    "description": "Get today's horoscope for an astrological sign.",
+    "strict": true
+  },
+  {
+    "type": "function",
+    "name": "search_attractions",
+    "param": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "目的地城市或地区名称，例如：'北京'、'东京'、'巴黎'"
+        },
+        "category": {
+          "type": "string",
+          "description": "景点分类或偏好，例如：'自然风光'、'历史古迹'、'博物馆'、'主题乐园'",
+          "enum": [
+            "自然风光",
+            "历史古迹",
+            "人文艺术",
+            "主题乐园",
+            "休闲逛街",
+            "全部"
+          ]
+        },
+        "limit": {
+          "type": "integer",
+          "description": "需要返回的景点数量上限，默认为 5"
+        }
+      },
+      "required": [
+        "city",
+        "category",
+        "limit"
+      ],
+      "additionalProperties": false
+    },
+    "description": "搜索指定城市或地区的热门旅游景点及相关推荐信息。",
+    "strict": true
+  },
+  {
+    "type": "function",
+    "name": "convert_currency",
+    "param": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "需要换算的货币数额，例如:100"
+        },
+        "from_currency": {
+          "type": "string",
+          "description": "源货币代码（建议使用标准 ISO 4217 格式），例如：'USD'、'CNY'、'JPY'"
+        },
+        "to_currency": {
+          "type": "string",
+          "description": "目标货币代码（建议使用标准 ISO 4217 格式），例如：'CNY'、'EUR'、'HKD'"
+        },
+        "result_amount": {
+          "type": "number",
+          "description": "换算后的货币数额, 例如:99.91"
+        }
+      },
+      "required": [
+        "amount",
+        "from_currency",
+        "to_currency",
+        "result_amount"
+      ],
+      "additionalProperties": false
+    },
+    "description": "实时计算并转换不同货币之间的汇率金额。",
+    "strict": true
+  }
+]
