@@ -1,4 +1,4 @@
-# My Simple Agent
+# My Simple Agent v0.1
 
 My Simple Agent is a lightweight AI agent framework designed to combine tool use, memory, model API integration, and runtime orchestration in a compact and understandable structure.
 
